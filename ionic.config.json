@@ -1,0 +1,7 @@
+{
+  "name": "fit_ticket",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
