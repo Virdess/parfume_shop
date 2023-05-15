@@ -11,31 +11,63 @@
                     <ion-router-outlet></ion-router-outlet>
                     <ion-tab-bar slot="bottom">
                         <ion-tab-button tab="tab1">
-                            <ion-label>Сегодня</ion-label>
+                            <ion-label>Самое популярное</ion-label>
                         </ion-tab-button>
 
                         <ion-tab-button tab="tab2">
-                            <ion-label>На этой неделе</ion-label>
+                            <ion-label>Самое дешёвое</ion-label>
                         </ion-tab-button>
 
                         <ion-tab-button tab="tab3">
-                            <ion-label>В этом месяце</ion-label>
+                            <ion-label>Новинки сезона</ion-label>
                         </ion-tab-button>
                     </ion-tab-bar>
                 </ion-tabs>
             </ion-toolbar>
-            <IonCard v-for="item in today" style="width: 95%;">
-                <IonCardHeader>
-                    <IonCardTitle>
-                        {{ item.title }}
-                    </IonCardTitle>
-                    <ion-card-subtitle>
-                        {{ item.time }}
-                    </ion-card-subtitle>
-                </IonCardHeader>
-                <IonCardContent>
-                    {{ item.where }}
-                </IonCardContent>
+            <IonCard v-if="$route.params.id == 'Парфюм-боксы'" v-for="item in boxes" style="width: 95%;">
+                <RouterLink :to="'/product/' + item.title" style="text-decoration: none !important;">
+                    <IonCardHeader>
+                        <IonCardTitle>
+                            {{ item.title }}
+                        </IonCardTitle>
+                        <ion-card-subtitle>
+                            {{ item.price }} тг.
+                        </ion-card-subtitle>
+                    </IonCardHeader>
+                    <IonCardContent>
+                        {{ item.where }}
+                    </IonCardContent>
+                </RouterLink>
+            </IonCard>
+            <IonCard v-else-if="$route.params.id == 'Для мужчин'" v-for="item in men" style="width: 95%;">
+                <RouterLink :to="'/product/' + item.title" style="text-decoration: none !important;">
+                    <IonCardHeader>
+                        <IonCardTitle>
+                            {{ item.title }}
+                        </IonCardTitle>
+                        <ion-card-subtitle>
+                            {{ item.price }} тг.
+                        </ion-card-subtitle>
+                    </IonCardHeader>
+                    <IonCardContent>
+                        {{ item.where }}
+                    </IonCardContent>
+                </RouterLink>
+            </IonCard>
+            <IonCard v-else="$route.params.id == 'Для мужчин'" v-for="item in women" style="width: 95%;">
+                <RouterLink :to="'/product/' + item.title" style="text-decoration: none !important;">
+                    <IonCardHeader>
+                        <IonCardTitle>
+                            {{ item.title }}
+                        </IonCardTitle>
+                        <ion-card-subtitle>
+                            {{ item.price }} тг.
+                        </ion-card-subtitle>
+                    </IonCardHeader>
+                    <IonCardContent>
+                        {{ item.where }}
+                    </IonCardContent>
+                </RouterLink>
             </IonCard>
             <IonRow>
                 <IonRow style="width: 100%; margin: 0;">
@@ -58,26 +90,72 @@
 import { IonPage, IonTitle, IonContent, IonToolbar, IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonRouterOutlet, IonRow, IonCol, IonCard, IonCardTitle, IonCardHeader, IonCardSubtitle, IonCardContent } from '@ionic/vue';
 import { ellipse, square, triangle } from 'ionicons/icons';
 
-let today = {
+let boxes = {
     item1: {
-        title: 'Тренировки с тренером',
-        time: '22:00-23:00',
-        where: 'Астана, ДС "Жастар"'
+        title: 'Подарочный бокс для девушки',
+        price: 8990,
+        where: ''
     },
     item2: {
-        title: 'Тренировка в зале',
-        time: '12:00-14:30',
-        where: 'Aray фитнесс центр для мужчин'
+        title: 'Подарочный бокс для парня',
+        price: 15400,
+        where: ''
     },
     item3: {
-        title: 'Самостоятельные занятия',
-        time: '20:40-22:20',
-        where: 'Sport city'
+        title: 'Бокс "Весна"',
+        price: 12000,
+        where: ''
     },
     item4: {
-        title: 'Тренировки с тренером',
-        time: '12:00-14:30',
-        where: 'Koktal Zal'
+        title: 'Бокс "Финляндия"',
+        price: 4650,
+        where: ''
+    },
+}
+
+let men = {
+    item1: {
+        title: 'Мужской адеколон "Горбатая свежесть"',
+        price: 8990,
+        where: ''
+    },
+    item2: {
+        title: 'Мужской адеколон пот горного льва',
+        price: 15400,
+        where: ''
+    },
+    item3: {
+        title: 'Мужской адеколон со льдами арктики',
+        price: 12000,
+        where: ''
+    },
+    item4: {
+        title: 'Мужской адеколон "Сила угля с углём"',
+        price: 4650,
+        where: ''
+    },
+}
+
+let women = {
+    item1: {
+        title: 'Запах розовой лаванды',
+        price: 8990,
+        where: ''
+    },
+    item2: {
+        title: 'Весенняя нежность пера',
+        price: 15400,
+        where: ''
+    },
+    item3: {
+        title: 'Летняя апельсиновая корка',
+        price: 12000,
+        where: ''
+    },
+    item4: {
+        title: 'Розы и леса японии',
+        price: 4650,
+        where: ''
     },
 }
 </script>

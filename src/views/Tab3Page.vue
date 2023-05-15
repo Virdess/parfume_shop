@@ -36,12 +36,6 @@
         <ion-input label="Номер" labelPlacement="floating" placeholder="Enter text" value="8 800 555 35 35"
           disabled={true}></ion-input>
       </ion-item>
-      <ion-title style="text-align: center; margin-top: 30px;">
-        Осталось посещений:
-      </ion-title>
-      <h1 style="text-align: center;">
-        999
-      </h1>
     </ion-content>
   </ion-page>
 </template>

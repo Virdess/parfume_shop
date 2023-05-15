@@ -4,19 +4,18 @@
             <ion-card style="text-align: center;">
                 <ion-card-header>
                     <ion-card-title>Добро пожаловать!</ion-card-title>
-                    <ion-card-subtitle>Онлайн абонемент</ion-card-subtitle>
+                    <ion-card-subtitle>PoDARI</ion-card-subtitle>
                 </ion-card-header>
 
                 <ion-card-content>
-                    Это приложение поможет вам не париться насчёт того, взяли ли вы свой абонемент с собой, ведь он всегда с
-                    вами в вашем телефоне! {{ someshit }}
+                    Вы попали в самый лучший онлайн-магазин парфюмерии в интернете! Просим к столу:{{ someshit }}
                 </ion-card-content>
             </ion-card>
             <ion-item>
                 <ion-input label="Логин" placeholder="Введите логин"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-input label="Пароль" type="password" placeholder="password"></ion-input>
+                <ion-input label="Пароль" type="password" placeholder="Пароль"></ion-input>
             </ion-item>
             <ion-button color="success" style="margin: 30px;" href="/tabs">Next</ion-button>
         </ion-list>

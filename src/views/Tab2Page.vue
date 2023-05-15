@@ -15,7 +15,7 @@
       <ion-alert :is-open="isOpen" header="Успешно" message="Успешно отсканировано. Ожидайте ответа от сервера"
         :buttons="alertButtons" @didDismiss="setOpen(false)"></ion-alert>
       <h1>Сканируйте и получайте бонусы</h1>
-      <p>Отсканируйте для отметки посещения в спорт. зал</p>
+      <p></p>
     </ion-content>
   </ion-page>
 </template>
