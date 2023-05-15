@@ -1,12 +1,12 @@
 <template>
     <ion-list>
         <ion-list-header>
-            <ion-label style="font-size: 18px; font-weight: bold;">Виды спорта</ion-label>
+            <ion-label style="font-size: 18px; font-weight: bold;">{{ name }}</ion-label>
         </ion-list-header>
         <IonItem v-for="item in sportsType" :key="item">
             <ion-label>
-                <a :href="'/sport_type/' + sportsTypeCount" style="text-decoration: none;">
-                    {{ item + " " + sportsTypeCount }}
+                <a :href="'/sport_type/' + item" style="text-decoration: none;">
+                    {{ item }}
                 </a>
             </ion-label>
         </IonItem>

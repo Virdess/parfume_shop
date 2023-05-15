@@ -2,11 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <ion-title>Главная</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <MainPageContainer name="Виды спортаx" />
+      <MainPageContainer name="Виды спорта" />
     </ion-content>
   </ion-page>
 </template>

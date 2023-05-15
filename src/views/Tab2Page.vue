@@ -5,7 +5,7 @@
         <ion-title>QR</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content :fullscreen="true">
+    <ion-content :fullscreen="true" style="text-align: center;">
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Tab 2</ion-title>
@@ -14,7 +14,8 @@
       <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
       <ion-alert :is-open="isOpen" header="Успешно" message="Успешно отсканировано. Ожидайте ответа от сервера"
         :buttons="alertButtons" @didDismiss="setOpen(false)"></ion-alert>
-      <ExploreContainer name="Tab 2 page" />
+      <h1>Сканируйте и получайте бонусы</h1>
+      <p>Отсканируйте для отметки посещения в спорт. зал</p>
     </ion-content>
   </ion-page>
 </template>
